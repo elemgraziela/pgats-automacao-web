@@ -1,12 +1,6 @@
 ///<reference types="cypress" />
 
 import userData from '../fixtures/example.json';
-import { 
-    getRandomNumber,
-    getRandomEmail
-} from '../support/helpers.js';
-
-import { faker } from '@faker-js/faker';
 
 import menu from '../modules/menu/index.js';
 import login from '../modules/login/index.js';
@@ -36,7 +30,7 @@ describe('Automation Exercise Test Suite', () => {
         cy.log(`Email do usuário: ${userData.email}`);
     });      
 
-    it.only('Cadastrar um usuário', () => {
+    it('Cadastrar um usuário', () => {
         menu.navegarParaLogin();
         login.preencherFormularioDePreCadastro();
         cadastro.preencherFormularioDeCadastroCompleto();
