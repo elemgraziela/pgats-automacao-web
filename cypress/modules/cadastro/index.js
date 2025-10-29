@@ -2,6 +2,8 @@ import { faker } from '@faker-js/faker';
 
 class Cadastro{
     preencherFormularioDeCadastroCompleto(){
+        const firstName = faker.person.firstName();
+        const lastName = faker.person.lastName();
     cy.get('input[type=radio]').check('Mrs')
     cy.get('input[data-qa="password"]').type('123456', { log: false })
     cy.get('select[data-qa="days"]').select('10')
